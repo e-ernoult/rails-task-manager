@@ -6,10 +6,10 @@
     <% else %>
     <i class="far fa-square"></i>
     <% end %>
-    <%= link_to task.title, task_path(task.id) %> <%= link_to task_delete_path(task.id), method: 'DELETE', data: { confirm: "Are you sure you want to delete #{task.title}?" } do %>
+    <%= link_to task.title, task_path(task.id) %> <%= link_to task_path(task.id), method: 'DELETE', data: { confirm: "Are you sure you want to delete #{task.title}?" } do %>
       <i class="fas fa-trash-alt"></i>
     <% end %>
   </li>
 <% end %>
 
-<%= link_to "Add a new task", tasks_new_path %>
+<%= link_to "Add a new task", new_task_path %>
